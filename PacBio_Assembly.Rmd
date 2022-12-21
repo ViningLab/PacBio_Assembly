@@ -1,0 +1,82 @@
+---
+title: "PacBio genome Assembly"
+author: "Brian J. Knaus"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    toc: true
+    code_folding: hide
+editor_options: 
+  chunk_output_type: console
+chunk_output_type: console
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.align = "center")
+```
+
+
+
+## PacBio Library
+
+
+Our project begins when we receive reads from a sequencing facility.
+The current PacBio requencing technology is 'hifi' reads.
+As you wait to receive the data, documentation on the process can be reviewed.
+
+- https://hifiasm.readthedocs.io/en/latest/index.html
+- https://ccs.how/
+- [Pacific-Biosciences-Glossary-of-Terms](./Pacific-Biosciences-Glossary-of-Terms.pdf)
+
+
+The sequenced read libraries are typically received as a compressed FASTQ file.
+Several of these FASTA.gz files may be received.
+The current read file contains reads filtered for a quality of 20 and are in a directory and file similar to the following.
+
+```
+ccs.Q20/m64047_220122_205527.ccs.fastq.gz
+```
+
+
+Information on quality encoding can be found at the following link.
+
+https://en.wikipedia.org/wiki/FASTQ_format
+
+
+## PacBio assembly without 'hifi' reads.
+
+
+If you have PacBio reads that are not 'hifi' reads you may want to consider legacy PacBio assembly software.
+
+- https://github.com/PacificBiosciences/pb-assembly
+
+
+## Assembly of 'hifi' reads with hifiasm
+
+- https://hifiasm.readthedocs.io/en/latest/
+- https://hifiasm.readthedocs.io/en/latest/interpreting-output.html
+
+
+## Evaluating an assembly
+
+
+- https://quast.sourceforge.net/
+- http://www.htslib.org/
+
+
+## Comparing assemblies
+
+
+- https://github.com/lh3/minimap2
+- https://github.com/tpoorten/dotPlotly
+- https://cran.r-project.org/web/packages/pafr/
+- https://dgenies.toulouse.inra.fr/
+
+
+
+
+
+
+
